@@ -1,128 +1,77 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var button= "generate";
-var Hello= prompt("Welcome to Extreme Guardian");
-var Hello= prompt("Your password may include: Numbers of Characters, Lower Case, Uper Case, Numbers and Symbols");
+var upperCEl = ("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+var lowerCEl = ("abcdefghijklmnopqrstuvwxyz");
+var numCEl = ("0123456789");
+var symbolCEl = ("~!@#$%^&*()_+=");
 
 
 
+ var myInput = document.getElementById("psw");
  var resultEl = document.getElementById("result");
  var upperCaseEl = document.getElementById("upperCase");
  var lowerCaseEl = document.getElementById("lowerCase");
  var numbersEl = document.getElementById("numbers");
  var symbolsEl = document.getElementById("symbols");
- var lengthEl = document.getElementById("length");
+ var lengthEl = document.getElementById("mMlength");
 
 
+// 
+var button = document.getElementById("generate");
 
-  
+//selection
+var persSelection = {};
+
+//prompt character length
+var charLength = parseInt(prompt(" type in a number between 8 and 128."));
+
+// show lenght; 
+console.log(charLength)
+
+//confirm selection
+var confirmUpper = confirm("Do you like upper case letters");
+var confirmLower = confirm("Do you like lower case letters");
+var confirmNumbers = confirm("Do you like numbers");
+var confirmSymbols =confirm("Do you like symbols");
+
+//confirming likes
+if (confirmUpper){
+  persSelection ["upperCEl"]= upperCEl;
+}
+if (confirmLower){
+  persSelection["lowerCEl"]= lowerCEl;
+}
+if (confirmNumbers){
+  persSelection ["numCEl"] =numCEl;
+}
+if (confirmSymbols){
+  persSelection ["symbolEl"]= symbolCEl;
+}
+console.log("persSelection");
+
+// prompt 
+persSelection();
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword(upperCase, lowerCase, numbers, symbols, length);
+  var password = generatePassword[("upperCEl, lowerCEl, numberCEl, symbolsEl,")];
   var passwordText = document.querySelector("#password");
     passwordText.value = password;
+    password = ();
+    for ( var i = 0; i <"mMLength", + i++);
   }
-
-
-
-
-
-
-   // When the user starts to type something inside the password field
-   myInput.onkeyup = function() {
-  // Validate lowercase letters
-  var lowerCase = /[a-z]/g;
-  if(myInput.value.match(lowerCase)) {
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
-  } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
-}
-
-
-  // Validate capital letters
-  var upperCase = /[A-Z]/g;
-  if(myInput.value.match(upperCase)) {
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
-
-  // Validate numbers
-  var numbers = /[0-9]/g;
-  if(myInput.value.match(numbers)) {
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
-
-  // Validate symbols
-  var symbols ="/([!@#$%&*{}])/g;
-  if(myInput.value.match(symbols)) {
-    number.classList.remove("invalid");
-    number.classList.add("valid");
-  } else {
-    number.classList.remove("valid");
-    number.classList.add("invalid");
-  }
-
-  // Validate length
-  if(myInput.value.length >8||<=128) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-}
-
-
-
-
-
-
-
-
-
-
-  //var confirmPassword = ("");
-
- 
-
-  
-
-
-
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);{
 function myFunction(generateBtn){
+password.innerhtml= writePassword();
   event.preventDefault();
- // Trigger the button element with a click
-  document.getElementById("btn").click();
 }
-
-    selectCriteria= prompt("Your password may include: Numbers of Characters, Lower Case, Uper Case, Numbers and Symbols");
+//generate password
+var randomCEl= finalPassword [ Math.floor, math.random ()* finalPassword.lenght]
+consolole.log (finalPassword);{
+return finalPassword;
 }
-
-//listEl.addEventListener("click", function(event) {
-  //event.preventDefault();
-  //if(event.target.#generate("button")) {
-    //var item = document.createElement("div");
-   // item.textContent = groceries[event.target.parentElement.id];
-   // shoppingCartEl.append(item);
- // }
-
-
-
-
-
 
 //GIVEN I need a new, secure password
 //WHEN I click the button to generate a password
@@ -138,66 +87,4 @@ function myFunction(generateBtn){
 //WHEN all prompts are answered
 //THEN a password is generated that matches the selected criteria
 //WHEN the password is generated
-//THEN the password is either displayed in an alert or written to the page
-
-//var myInput = document.getElementById("psw");
-//var letter = document.getElementById("letter");
-//var capital = document.getElementById("capital");
-//var number = document.getElementById("number");
-//var length = document.getElementById("length");
-
-// When the user clicks on the password field, show the message box
-//myInput.onfocus = function() {
-  //document.getElementById("message").style.display = "block";
-//}
-
-// When the user clicks outside of the password field, hide the message box
-//myInput.onblur = function() {
-  //document.getElementById("message").style.display = "none";
-//}
-
-// When the user starts to type something inside the password field
-//myInput.onkeyup = function() {
-  // Validate lowercase letters
-  //var lowerCaseLetters = /[a-z]/g;
-  //if(myInput.value.match(lowerCaseLetters)) {
-    //letter.classList.remove("invalid");
-    //letter.classList.add("valid");
-  //} //else {
-    //letter.classList.remove("valid");
-    //letter.classList.add("invalid");
-//}
-
-  // Validate capital letters
-  //var upperCaseLetters = /[A-Z]/g;
-  //if(myInput.value.match(upperCaseLetters)) {
-    //capital.classList.remove("invalid");
-    ///capital.classList.add("valid");
-  //} else {
-    //capital.classList.remove("valid");
-    //capital.classList.add("invalid");
-  //}
-
-  // Validate numbers
-  //var numbers = /[0-9]/g;
-  //if(myInput.value.match(numbers)) {
-    //number.classList.remove("invalid");
-    //number.classList.add("valid");
- // } else {
-   // number.classList.remove("valid");
-   // number.classList.add("invalid");
- // }
-
-  // Validate length
-  //if(myInput.value.length >= 8) {
-    //length.classList.remove("invalid");
-    //length.classList.add("valid");
- // } else {
-   // length.classList.remove("valid");
-   // length.classList.add("invalid");
- // }
-//}
-//
-//{
-
-
+//THEN the password is either displayed in an alert or written to the page.

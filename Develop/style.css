@@ -108,6 +108,7 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.2rem;
   text-align: center;
   margin-top: 10px;
@@ -168,4 +169,4 @@ button[disabled] {
    /* Box-model */
    width: 100%;
    padding: 20px;
- }
+  }

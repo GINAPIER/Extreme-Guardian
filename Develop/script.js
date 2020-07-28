@@ -20,21 +20,21 @@ var symbolCEl = ("~!@#$%^&*()_+=");
 var button = document.getElementById("generate");
 
 //selection
-var persSelection = {};
+var persSelection = ( "");
 
 //prompt character length
-var charLength = parseInt(prompt(" type a number between 8 and 128."));
+//var chartLength = parseInt(prompt(" password must be between 8 and 128 characters long"));
 while (lengthInput < 8 || lengthInput > 128 || isNaN(lengthInput)){
-  lengthInput = prompt("Invalid entry, password must be between 8 and 128 characters in length. Please enter a valid length.");
+  lengthInput = prompt("password must be between 8 and 128 characters in length. Please enter a valid length.");
 }
 // show lenght; 
-console.log(charLength)
+console.log(chartLength);
 
 //confirm selection
-var confirmUpper = confirm("Do you like upper case letters");
-var confirmLower = confirm("Do you like lower case letters");
-var confirmNumbers = confirm("Do you like numbers");
-var confirmSymbols =confirm("Do you like symbols");
+var confirmUpper = prompt("Do you like upper case letters");
+var confirmLower = prompt("Do you like lower case letters");
+var confirmNumbers = prompt("Do you like numbers");
+var confirmSymbols =prompt("Do you like symbols");
 
 //confirming likes
 if (confirmUpper){
@@ -49,19 +49,27 @@ if (confirmNumbers){
 if (confirmSymbols){
   persSelection ["symbolEl"]= symbolCEl;
 }
-console.log("persSelection");
+console.log("persSelection")
+
 
 // prompt 
-persSelection();
+//persSelection();
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword[("upperCEl, lowerCEl, numberCEl, symbolsEl,")];
+  var fPassword = "";
+  for ( var i = 0; i < chartLength ; + i++ );
+
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
-    passwordText.value = password;
-  
-    for ( var i = 0; i <=charLength ; + i++ );
-  
+    passwordText.value = password   
+
+
+   console.log(passwordText, document.querySelector);
+    console.log(fPassword, fPassword.length);
+    console.log( chartLength)
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);{
@@ -71,8 +79,6 @@ password.innerhtml= writePassword();
 }
 //generate password
 var randomCEl= passwordText [ Math.floor, math.random ()* passwordText.lenght]
-consolole.log (passwordText);{
+consolole.log (passwordText);
 function generate ( generatePassword, passwordText)
-return password;
-}
 

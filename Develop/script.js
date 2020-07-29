@@ -25,29 +25,33 @@ var persSelection = ( "");
 //prompt character length
 //var chartLength = parseInt(prompt(" password must be between 8 and 128 characters long"));
 while (lengthInput < 8 || lengthInput > 128 || isNaN(lengthInput)){
-  lengthInput = prompt("password must be between 8 and 128 characters in length. Please enter a valid length.");
+  alert("password must be between 8 and 128 characters in length. Please enter a valid length.");
 }
 // show lenght; 
 console.log(chartLength);
 
 //confirm selection
-var confirmUpper = prompt("Do you like upper case letters");
-var confirmLower = prompt("Do you like lower case letters");
-var confirmNumbers = prompt("Do you like numbers");
-var confirmSymbols =prompt("Do you like symbols");
+var confirmUpper = confirm("Do you like upper case letters");
+var confirmLower = confirm("Do you like lower case letters");
+var confirmNumbers = confirm("Do you like numbers");
+var confirmSymbols =confirm("Do you like symbols");
 
 //confirming likes
 if (confirmUpper){
   persSelection ["upperCEl"]= upperCEl;
+  alert (" You must select at least one character for your password")
 }
 if (confirmLower){
   persSelection["lowerCEl"]= lowerCEl;
+  alert (" You must select at least one character for your password")
 }
 if (confirmNumbers){
   persSelection ["numCEl"] =numCEl;
+  alert (" You must select at least one character for your password")
 }
 if (confirmSymbols){
   persSelection ["symbolEl"]= symbolCEl;
+  alert (" You must select at least one character for your password")
 }
 console.log("persSelection")
 
